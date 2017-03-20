@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SearchBar from './components/search_bar';
 
-const App = () => { //ES6 
-  return <div> Hi </div>;
+const App = () => { //ES6
+  return <div>
+  <SearchBar />
+   </div>;
 }
 
 ReactDOM.render(<App />, document.querySelector('.container'));
