@@ -6,8 +6,7 @@ const API_KEY = 'AIzaSyDLhJQ0n2_3HXZLjLqN88_X2YNyWI94430';
 
 
 const App = () => { //ES6
-  return
-  <div>
+  return <div>
    <SearchBar />
   </div>;
 }
