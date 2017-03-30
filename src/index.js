@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar';
 import YTSearch from 'youtube-api-search';
+import VideoList from './components/video_list'
 
 const API_KEY = 'AIzaSyDLhJQ0n2_3HXZLjLqN88_X2YNyWI94430';
 
@@ -13,7 +14,7 @@ class App extends Component {
 
     this.state = { videos: [] };
 
-    YTSearch({key: API_KEY, term: 'nba'}, function(videos) {
+    YTSearch({key: API_KEY, term: 'nba'}, (videos) => {
       this.setState({ videos });
     });
   }
@@ -22,6 +23,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
+        <VideoList videos = {this.state.videos}/>
       </div>
     );
   }
